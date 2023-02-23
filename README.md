@@ -69,4 +69,13 @@ está
 
 - mkdir - Cria diretórios
 
+- mkdir 'nome composto' - Cria nome composto
 
+
+- rmdir + diretório - Apaga o diretório
+
+
+- rm - apaga arquivo
+
+
+- rm -rf(r=recursivo, f=force) - Apaga o diretório e todo o conteúdo que estiver dentro.
