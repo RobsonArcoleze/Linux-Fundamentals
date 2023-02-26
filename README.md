@@ -79,3 +79,43 @@ está
 
 
 - rm -rf(r=recursivo, f=force) - Apaga o diretório e todo o conteúdo que estiver dentro.
+
+- --help - O comando seguido de --help abre uma guia de ajuda
+- ls -l - Lista longa
+- ls -a - Lista arquivos ocultos
+- ls -h - Mostra o tamanho dos arquivos em k, G ...
+- man - man + o comando te dá uma ajuda em forma de texto
+- cat - serve para ler um arquivo
+- sudo - Usado para fazer operações de administrador
+- sudo passwd + nome de Usuário - Para atribuir uma senha a um usuário existente
+- sudo su
+
+**sshd** Serviço de acesso remoto
+
+- nano - é um editor de texto
+
+**Habilitando acesso remoto via ssh para usuário root
+
+sudo nano etc/ssh/sshd_config
+
+Authentication:
+	...
+	PermitRootLogin yes
+	...
+	
+- systemctl - pode ser usado para controlar e gerenciar serviços sistema
+
+- systemctl status sshd - mostra se o ssh está ativo no sistema. Mostra os logs também
+
+- systemctl restart sshd - Restarta o o sshd
+
+
+## Editores de texto
+
+
+- vi - vi leia-me.txt 'Se o arquivo existir ele abre, caso não, ele cria'; Pressione a tecla 'I' para iserir um texto; pressione 'ESC' para sair do modo de inserção, para salvar aperte as teclas ':' e depois aperte 'w, serve para salvar', 'q, quit (para sair)'
+
+- nano - nano é muito simples, auto explicativo
+
+- history - Lista o histórico de comandos utilizados pelo usuário
+
