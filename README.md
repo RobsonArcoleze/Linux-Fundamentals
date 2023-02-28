@@ -111,9 +111,6 @@ Authentication:
 
 - history - Lista o histórico de comandos utilizados pelo usuário
 
-- useradd + nome - Cria um usuário
-- userdel -f + nome  - Exclui um usuário
-- useradd joao -m(cria a pasta de usuário) -c "João da Silva"(Cria o nome completo de usuário) -s /bin/bash -> Para escolher o terminal
 
 ## Editores de texto
 
@@ -122,8 +119,11 @@ Authentication:
 
 - nano - nano é muito simples, auto explicativo
 
+## Usuários
 
-
+- useradd + nome - Cria um usuário
+- userdel -f + nome  - Exclui um usuário
+- useradd joao -m(cria a pasta de usuário) -c "João da Silva"(Cria o nome completo de usuário) -s /bin/bash -> Para escolher o terminal
 
 
 
