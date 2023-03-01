@@ -190,13 +190,25 @@ useradd debora -c "Débora Silva" -s /bin/bash -m -p $(openssl passwd 72551984) 
 
 ```
 
-**Removendo usuários de grupos especificos
+**Removendo usuários de grupos especificos**
 
 ```
 
 gpasswd -d mariana sudo ------------> -d deleta do grupo, seguido no nome de usuário e o grupo que deseja remover
 
+
 ```
+
+## Conhecendo sistema de permisões
+
+```
+
+drwxr-xr-x   4 root root       4096 fev 28 00:59 boot
+
+A primeira letra indica o Tipo 'd' = diretório, '-' = arquivo
+
+```
+[img][sistema de permissões]
 
 
 
