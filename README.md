@@ -227,7 +227,7 @@ OBS: Só é possivel realizar essa alteração se estiver logado como root, ou a
 
 **Alterando as permissões de um diretório ou arquivo**
 
-![img 3]()
+![img 3](https://github.com/RobsonArcoleze/Linux-Fundamentals/blob/main/img/leitura-gravacao-execucao.png)
 
 ```
 chmod 777 ---> Permissão total para dono, group e outros
