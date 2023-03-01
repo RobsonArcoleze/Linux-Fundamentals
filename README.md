@@ -208,7 +208,10 @@ drwxr-xr-x   4 root root       4096 fev 28 00:59 boot
 A primeira letra indica o Tipo 'd' = diretório, '-' = arquivo
 
 ```
-[img][sistema de permissões]
+![img 1](https://github.com/RobsonArcoleze/Linux-Fundamentals/blob/main/img/sistema%20de%20permiss%C3%B5es.png)
+
+
+![img 2](https://github.com/RobsonArcoleze/Linux-Fundamentals/blob/main/img/significado.png)
 
 
 
