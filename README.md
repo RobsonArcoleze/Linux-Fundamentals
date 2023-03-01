@@ -214,5 +214,30 @@ A primeira letra indica o Tipo 'd' = diretório, '-' = arquivo
 ![img 2](https://github.com/RobsonArcoleze/Linux-Fundamentals/blob/main/img/significado.png)
 
 
+**Trocando o dono e grupo do diretorio**
+
+```
+chown nomeDoUsuario:nomeDoGrupo diretorio ------>
+
+----> chown debora:GRP_ADM /adm/
+
+OBS: Só é possivel realizar essa alteração se estiver logado como root, ou adm acessando através do sudo
+
+```
+
+**Alterando as permissões de um diretório ou arquivo**
+
+![img 3]()
+
+```
+chmod 777 ---> Permissão total para dono, group e outros
+chmod 750 ---> Permissão total para dono, RX para group, nenhuma permisão para outros
+chmod 700 ---> Permissão total para dono, nenhuma permissão para group e outros
+
+
+Ex: chmod 755 /adm/ -------> Dono permissão total, grupo pode ler e executar, outros pode ler e executar;
+
+```
+
 
 
