@@ -94,14 +94,16 @@ está
 
 - nano - é um editor de texto
 
-**Habilitando acesso remoto via ssh para usuário root
+**Habilitando acesso remoto via ssh para usuário root**
 
 sudo nano etc/ssh/sshd_config
 
 Authentication:
-	...
-	PermitRootLogin yes
-	...
+
+``` 
+PermitRootLogin yes
+
+``` 
 	
 - systemctl - pode ser usado para controlar e gerenciar serviços sistema
 
@@ -119,11 +121,83 @@ Authentication:
 
 - nano - nano é muito simples, auto explicativo
 
-## Usuários
+## Gerenciando Usuários no Linux
+
 
 - useradd + nome - Cria um usuário
 - userdel -f + nome  - Exclui um usuário
 - useradd joao -m(cria a pasta de usuário) -c "João da Silva"(Cria o nome completo de usuário) -s /bin/bash -> Para escolher o terminal
+
+
+- useradd + nome -c "nome+sobrenome" -m  -e 01/03/2023 -> '-e' cria uma data de expiração para o usuário
+
+- usermod -> Utilizado para realizar alterações em usuários
+
+**Adicionando usuário com senha**
+
+Para criar um usuário com senha em um unico comando é necessário que essa senha esteja incriptada
+
+- useradd convidado -c "Convidado Especial" -s /bin/bash -m -p $(openssl passwd -crypt senha)
+
+
+## Criando Scripts
+
+- Criar um diretório -> mkdir /scripts
+
+- cd /scripts
+
+- nano criar_user.sh
+
+``` 
+#!/bin/bash  ---> Como é um script, obrigatoriamente se inicia assim
+
+echo "Criando usuários do sistema"
+
+useradd guest10 -c "Convidado" -s /bin/bash -m -p $(openssl passwd 72551984)
+passwd guest10 -e
+
+useradd guest11 -c "Convidado" -s /bin/bash -m -p $(openssl passwd 72551984)
+passwd guest11 -e
+
+useradd guest12 -c "Convidado" -s /bin/bash -m -p $(openssl passwd 72551984)
+passwd guest12 -e
+
+useradd guest13 -c "Convidado" -s /bin/bash -m -p $(openssl passwd 72551984)
+passwd guest13 -e
+
+echo "Finalizado!!!"
+
+```
+
+- chmod +x + nome do arquivo  --------> Dando permissão para executar
+
+- ./scripts -----> Para executar o arquivo
+
+## Grupos de Usuários
+
+- com um usuário criado -----> usermod -G adm,sudo nomeDeUsuário "-G maiusculo adiciona a vários grupos"
+
+## Criando novos grupos
+
+
+- groupadd GRP_ADM --------> Comando usado para criar um group
+
+
+**Criando usuários e adicionando a grupos que já possuir**
+
+```
+useradd debora -c "Débora Silva" -s /bin/bash -m -p $(openssl passwd 72551984) -G GRP_ADM
+
+```
+
+**Removendo usuários de grupos especificos
+
+```
+
+gpasswd -d mariana sudo ------------> -d deleta do grupo, seguido no nome de usuário e o grupo que deseja remover
+
+```
+
 
 
 
