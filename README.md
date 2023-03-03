@@ -183,14 +183,14 @@ echo "Finalizado!!!"
 - groupadd GRP_ADM --------> Comando usado para criar um group
 
 
-**Criando usuários e adicionando a grupos que já possuir**
+### Criando usuários e adicionando a grupos que já possuir
 
 ```
 useradd debora -c "Débora Silva" -s /bin/bash -m -p $(openssl passwd 72551984) -G GRP_ADM
 
 ```
 
-**Removendo usuários de grupos especificos**
+### Removendo usuários de grupos especificos
 
 ```
 
@@ -214,7 +214,7 @@ A primeira letra indica o Tipo 'd' = diretório, '-' = arquivo
 ![img 2](https://github.com/RobsonArcoleze/Linux-Fundamentals/blob/main/img/significado.png)
 
 
-**Trocando o dono e grupo do diretorio**
+### Trocando o dono e grupo do diretorio
 
 ```
 chown nomeDoUsuario:nomeDoGrupo diretorio ------>
@@ -225,7 +225,7 @@ OBS: Só é possivel realizar essa alteração se estiver logado como root, ou a
 
 ```
 
-**Alterando as permissões de um diretório ou arquivo**
+### Alterando as permissões de um diretório ou arquivo
 
 ![img 3](https://github.com/RobsonArcoleze/Linux-Fundamentals/blob/main/img/leitura-gravacao-execucao.png)
 
@@ -252,6 +252,27 @@ Ex: chmod 755 /adm/ -------> Dono permissão total, grupo pode ler e executar, o
   - apt install -----------------> Instala um programa
   - apt remove +nome -y ---------> Desinstala um programa, '-y' é utilizado para que o terminal não pergunte se quer desinstalar
   - apt edit-sources ------------> Utlizado para adicionar um repo que não consta no repo oficial do Ubuntu, ex: DB Oracle
+  
+  
+### Atualização do Sistema Operacional
+
+O ideal é que seja feita em ambiente de teste utillizando uma máquina virtual, pode-se tirar um screenshot antes da atualização e realizar o upgrade (Em produção é muito importante tomar cuidado com atualização)
+
+  - apt upgrade -----> Verifica atualização
+  - apt update ------> Realiza a atualização
+  
+  
+### Gerenciamento de Pacotes (FEDORA RED HAT CenTOS)
+
+- dnf -------> Parecido com apt
+- yum -------> Parecido com apt-get  
+
+### Realizando a instalação de arquivos DEB
+
+Fiz o download do Chrome e desejo instalá-lo, como fazer isso pelo terminal: 
+
+  - Abra um teminal no diretório do arquivo com extensão .deb (Esta extensão é utilizada por softwares baseados em Debian).
+  - sudo apt install ./nomeDoArquivo.deb
 
 
 
