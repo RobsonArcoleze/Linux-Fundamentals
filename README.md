@@ -256,7 +256,7 @@ Ex: chmod 755 /adm/ -------> Dono permissão total, grupo pode ler e executar, o
   
 ### Atualização do Sistema Operacional
 
-O ideal é que seja feita em ambiente de teste utillizando uma máquina virtual, pode-se tirar um screenshot antes da atualização e realizar o upgrade (Em produção é muito importante tomar cuidado com atualização)
+O ideal é que seja feita em ambiente de teste utillizando uma máquina virtual, pode-se tirar um snapshot antes da atualização e realizar o upgrade (Em produção é muito importante tomar cuidado com atualização)
 
   - apt upgrade -----> Verifica atualização
   - apt update ------> Realiza a atualização
@@ -397,7 +397,7 @@ root          22  0.0  0.0      0     0 ?        S    mar02   0:00 [khungtaskd]
 
 ```
 
-**Matando um processo
+**Matando um processo**
 
 - kill + PID ------> Usado quando se sabe o nome do processo
 
@@ -410,6 +410,27 @@ Logado como root, posso descobrir quem mais está logado
 - who -a ---> Mostra os usuários logados e o PID
 
 
+
+## Servidores com Linux
+
+
+### Servidor de arquivos
+
+1- Baixar o samba
+2- Criar uma pasta 'publica' com permissão total
+3- editar configurações
+``` nano /etc/samba/smb.conf ```   
+
+4- Precisa reiniciar o Samba
+  - O samba é executado em segundo plano, no linux serviços executados em segundo plano são chamados de **'daemon'**
+  
+  O comando utilizado para reiniciar, fechar e iniciar serviços em segundo plano:
+  
+  - systemctl restart smbd
+  
+  Comando utilizado para que toda a vez que o sistema seja reiniciado o serviço suba sozinho
+  
+  - systemctl enable smbd
 
 
 
