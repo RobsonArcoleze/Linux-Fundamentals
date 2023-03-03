@@ -264,10 +264,13 @@ O ideal é que seja feita em ambiente de teste utillizando uma máquina virtual,
   
 ### Gerenciamento de Pacotes (FEDORA RED HAT CenTOS)
 
+
 - dnf -------> Parecido com apt
 - yum -------> Parecido com apt-get  
 
+
 ### Realizando a instalação de arquivos DEB
+
 
 Fiz o download do Chrome e desejo instalá-lo, como fazer isso pelo terminal: 
 
@@ -277,12 +280,56 @@ Fiz o download do Chrome e desejo instalá-lo, como fazer isso pelo terminal:
   
 ## Gerenciamento de discos linux
 
+
 No linux cada disco é nomeado da seguinte forma 'sda'----> Caso haja partições 'sda1', 'sda2'...etc;
 
 **Visualizando discos disponiveis**
 
 - lsblk
 - fdisk -l ------> '-l' usado para listar os discos
+
+
+### Particionando e formantando discos via terminal
+
+- Particionando
+  - fdisk /dev/sdb
+  
+- Formatando
+  - mkfs.ext4 /dev/sdb
+  
+  
+### Montando e desmontando discos
+
+
+- mount /dev/sdb /mnt/disco2/-----------> Comando mount é usando para montar o disco, /mnt/disco2/ são diretórios criados pelo usuário para alocar o disco
+
+- umount /dev/sdb ----------> Desmonta o disco
+
+
+### Montando discos automaticamente
+
+Logado como root, use o seguinte código:
+
+- nano /etc/fstab/
+
+```
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/ubuntu-vg/ubuntu-lv during curtin installation
+/dev/disk/by-id/dm-uuid-LVM-jyEOcJ0vVQ2afWnjjfmjf8CjYWBgIyH17czmznQetNmOaHnJwxe>
+# /boot was on /dev/sda2 during curtin installation
+/dev/disk/by-uuid/80398b7e-f297-4e39-a28b-b0de7fa61454 /boot ext4 defaults 0 1
+/swap.img       none    swap    sw      0       0
+
+"Estou Montando meu disco automáticamente"
+/dev/sdb /disk2 ext4 defaults 0 0 -----> disk2 é um diretório craido pelo usuário, ext4 é o formato do disco, parametros defaults usado par backup
+
+```  
 
   
   
