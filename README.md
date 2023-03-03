@@ -239,5 +239,27 @@ Ex: chmod 755 /adm/ -------> Dono permissão total, grupo pode ler e executar, o
 
 ```
 
+## Gerenciamento de Pacotes Linux (UBUNTU-DEBIAN)
+
+- apt-get ---------> Não é muito amigavel
+
+- apt ----------> Amigável com o usuário
+  - apt list -----> Lista tudo que tenho disponivel para baixar
+  - apt list --installed --------> Lista os programas que tenho na minha máquina
+  - apt list --upgradeable ------> Lista o que pode ser atualizado
+  - apt list
+  - apt search apache -----------> Verifica se o apache está disponivel
+  - apt install -----------------> Instala um programa
+  - apt remove +nome -y ---------> Desinstala um programa, '-y' é utilizado para que o terminal não pergunte se quer desinstalar
+  - apt edit-sources ------------> Utlizado para adicionar um repo que não consta no repo oficial do Ubuntu, ex: DB Oracle
+
+
+
+
+
+
+
+
+
 
 
