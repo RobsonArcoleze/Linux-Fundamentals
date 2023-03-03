@@ -273,6 +273,19 @@ Fiz o download do Chrome e desejo instalá-lo, como fazer isso pelo terminal:
 
   - Abra um teminal no diretório do arquivo com extensão .deb (Esta extensão é utilizada por softwares baseados em Debian).
   - sudo apt install ./nomeDoArquivo.deb
+  
+  
+## Gerenciamento de discos linux
+
+No linux cada disco é nomeado da seguinte forma 'sda'----> Caso haja partições 'sda1', 'sda2'...etc;
+
+**Visualizando discos disponiveis**
+
+- lsblk
+- fdisk -l ------> '-l' usado para listar os discos
+
+  
+  
 
 
 
