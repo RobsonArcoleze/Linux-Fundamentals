@@ -327,13 +327,87 @@ Logado como root, use o seguinte código:
 /swap.img       none    swap    sw      0       0
 
 "Estou Montando meu disco automáticamente"
-/dev/sdb /disk2 ext4 defaults 0 0 -----> disk2 é um diretório craido pelo usuário, ext4 é o formato do disco, parametros defaults usado par backup
+/dev/sdb /disk2 ext4 defaults 0 0 -----> disk2 é um diretório criado pelo usuário, ext4 é o formato do disco, parametros defaults usado par backup
 
 ```  
 
-  
-  
+## Copiando arquivos e manipulando processos
 
+
+### Copiando arquivos
+
+
+**Comando + origem + destino**
+
+- cp /home/robson/bancodedados.mdf /disk2/
+
+- cp /home/robson/*.txt /disk2/
+
+- cp -i -------> pergunta se quer sobrepor arquivos com nomes iguais
+
+- cp -r -------> Copia tudo recursivamente
+
+- cp -v -------> Ativa o modo verboso, mostra o que está acontecendo durante a cópia
+
+
+### Movendo arquivos
+  
+**Comando + origem + destino**
+
+- mv /home/robson/bancodedados.mdf /disk2/
+
+O comando mv tabém pode ser usado para renomear arquivos:
+
+- mv bancodedados.mdf banco_de_dados.mdf
+
+
+### Iniciando, Visualizando e Encerrando um Processo
+
+comando usado para mostrar processos em execução
+
+- ps ------> ps sozinho, só mostra processos do usuário logado 
+
+- ps aux
+
+  - a ------> Mostra os processos de todos os usuários
+  - u ------> Fornece o nome do usuário e o horário que ele iniciou o processo
+  - x ------> Mostra os processos que foram executados fora do console
+
+```
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.9 100796  9880 ?        Ss   mar02   0:01 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    mar02   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   mar02   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   mar02   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   mar02   0:00 [slub_flushwq
+root           6  0.0  0.0      0     0 ?        I<   mar02   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   mar02   0:00 [kworker/0:0H
+root          10  0.0  0.0      0     0 ?        I<   mar02   0:00 [mm_percpu_wq
+root          11  0.0  0.0      0     0 ?        S    mar02   0:00 [rcu_tasks_ru
+root          12  0.0  0.0      0     0 ?        S    mar02   0:00 [rcu_tasks_tr
+root          13  0.0  0.0      0     0 ?        S    mar02   0:00 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        I    mar02   0:08 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    mar02   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    mar02   0:00 [idle_inject/
+root          18  0.0  0.0      0     0 ?        S    mar02   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    mar02   0:00 [kdevtmpfs]
+root          20  0.0  0.0      0     0 ?        I<   mar02   0:00 [inet_frag_wq
+root          21  0.0  0.0      0     0 ?        S    mar02   0:00 [kauditd]
+root          22  0.0  0.0      0     0 ?        S    mar02   0:00 [khungtaskd]
+
+```
+
+**Matando um processo
+
+- kill + PID ------> Usado quando se sabe o nome do processo
+
+- killall chrome --------> Mata todos os processos com esse nome
+
+Logado como root, posso descobrir quem mais está logado
+
+- w --------> Mostra os usuários logados, mas não mostra o PID
+
+- who -a ---> Mostra os usuários logados e o PID
 
 
 
