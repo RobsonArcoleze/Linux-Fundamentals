@@ -445,6 +445,17 @@ Instalando o apache2
 
 - Verificar o status: systemctl status apache2
 
+## Fim
+
+Este repositório foi construido com base no curso de Linux Fundamentals da Dio
+
+
+## Autor
+
+Robson Arcoleze
+
+https://www.linkedin.com/in/robsonarcoleze/
+
 
 
 
