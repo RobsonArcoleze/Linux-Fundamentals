@@ -417,9 +417,14 @@ Logado como root, posso descobrir quem mais está logado
 ### Servidor de arquivos
 
 1- Baixar o samba
+
+
 2- Criar uma pasta 'publica' com permissão total
+
+
 3- editar configurações
 ``` nano /etc/samba/smb.conf ```   
+
 
 4- Precisa reiniciar o Samba
   - O samba é executado em segundo plano, no linux serviços executados em segundo plano são chamados de **'daemon'**
@@ -432,8 +437,13 @@ Logado como root, posso descobrir quem mais está logado
   
   - systemctl enable smbd
 
+## Criando um Servidor WEB com Linux
 
+Instalando o apache2
 
+- apt install apache2 -y
+
+- Verificar o status: systemctl status apache2
 
 
 
